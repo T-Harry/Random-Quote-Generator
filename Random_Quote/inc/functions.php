@@ -34,6 +34,15 @@ $quotes = [
      'type' => Null],
 ];
 
+$background_colors = array(
+  //Blues : Type - Technology
+  array('#4dc3ff','#0099e6','#4dc3ff','#33adff'),
+  //Greens : Type - Motivational
+  array('#33cc00','#39e600','#47d147','#70db70'),
+  //Purples : No Type
+  array('#c653c6','#bf40bf','#cc66cc','#ac39ac'),
+);
+
 function getRandomQuote($array) {
   //Generates a random number based on length of array passed and returns that number
   //Count function counts like a human - it starts at 1. -1 prevents showing a blank quote
@@ -62,18 +71,5 @@ function printQuote() {
     echo '<body style="background-color:' . $background . '">';
   }
 }
-
-$background_colors = array(
-  //Blues : Type - Technology
-  array('#4dc3ff','#0099e6','#4dc3ff','#33adff'),
-  //Greens : Type - Motivational
-  array('#33cc00','#39e600','#47d147','#70db70'),
-  //Purples : No Type
-  array('#c653c6','#bf40bf','#cc66cc','#ac39ac'),
-);
-
-
-
-
 
 ?>
