@@ -19,7 +19,7 @@ function printQuote() {
   //Assign and concatenate the string back to the $string variable
   $string .= "<p class='quote'>" . $quote['quote'] . "</p>";
 
-  //Adds citaton if one exists within the array
+  //Adds citaton & year if they exist within the array
   if ($quote['citation'] !== Null && $quote['year'] !== Null) {
     $string .= "<p class='source'>" . $quote['source'] . "<span class='citation'>" . $quote['citation'] . "</span>" . "<span class='year'>" . $quote['year'] . "</span>" . "</p>";
   }
@@ -27,6 +27,7 @@ function printQuote() {
   elseif ($quote['year'] !== Null) {
     $string .= "<p class='source'>" . $quote['source'] . "<span class='year'>" . $quote['year'] . "</span>" . "</p>";
   }
+  //Adds citation if one exists within the array
   elseif ($quote['citation'] !== Null) {
     $string .= "<p class='source'>" . $quote['source'] . "<span class='citation'>" . $quote['citation'] . "</span>" . "</p>";
   }
