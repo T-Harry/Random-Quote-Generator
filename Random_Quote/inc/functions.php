@@ -1,9 +1,6 @@
 <?php
 // PHP - Random Quote Generator
 
-// Create the Multidimensional array of quote elements and name it quotes
-// Each inner array element should be an associative array
-
 $quotes = [
    ['quote' => 'Ruby is rubbish! PHP is phpantastic!',
    'source' => 'Nikita Popov',
