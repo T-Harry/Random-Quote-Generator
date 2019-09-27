@@ -1,7 +1,6 @@
 /* Random Quote Generator Styles */
 
 body {
-/*background-color: #36b55c;*/
   color: white;
   font-family: 'Playfair Display', serif;
 }
@@ -51,6 +50,7 @@ body {
 }
 
 .source:before {
+  content: ", ";
   content: "—";
 }
 
@@ -59,7 +59,6 @@ body {
 }
 
 .citation:before {
-  content: ", ";
   font-style: normal;
 }
 

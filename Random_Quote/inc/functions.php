@@ -29,6 +29,10 @@ $quotes = [
    ['quote' => 'If you set your goals ridiculously high and it\'s a failure, you will fail above everyone else\'s success.',
    'source' => 'James Cameron',
      'type' => Null],
+   ['quote' => 'If we\'re going to be damned, let\'s be damned for what we really are.',
+   'source' => 'Jean-Luc',
+     'type' => Null,
+ 'citation' => '"Startrek: The Next Generation" Encounter at Farpoint'],
 ];
 
 $background_colors = array(
@@ -55,7 +59,17 @@ function printQuote() {
   //Assign and concatenate the string back to the $string variable
   $string .= "<p class='quote'>" . $quote['quote'] . "</p>";
   $string .= "<p class='source'>" . $quote['source'] . "</p>";
+  //Adds citaton if one exists within the array
+  if ($quote['citation'] !== Null) {
+    $string .= "<p class='citation'>" . $quote['citation'] . "</p>";
+  }
+  //Adds year if one exists within the array
+  elseif ($quote['year'] !== Null) {
+    $string .= "<p class='year'>" . $quote['year'] . "</p>";
+  }
   echo $string;
+
+  //Changes background color depending on 'type' value
   if ($quote['type'] == 'Tech') {
     //Generates a random number to be used for the index value of the array
     $background = $background_colors[0][rand(0,count($background_colors))];
